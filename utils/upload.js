@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
             return cb(new Error("File is not allowed"), undefined)
         }
 
-        cb(null, file.originalname);
+        cb(null, Date.now() + "-" + file.originalname);
     }
 });
 
