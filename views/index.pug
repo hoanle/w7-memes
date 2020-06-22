@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class='index-main-div')
+    h1(class="header-text")= "MEMEs"
+    img(id="img-upload" class="image-placeholder", src="https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img.jpg", alt="")
+    form(action="/upload" method="post" enctype="multipart/form-data" class="form-upload")
+      input(id="input-image" class='input-image', type="file", accept="image/*", name="fileupload")
+      input(type="submit", class="btn btn-danger btn-upload",  value="Upload", name="submit") 
+  script(src="./javascripts/script.js")
+

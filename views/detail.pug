@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div(class="detail-div")
+        div(class="col-md-4 sol-sm-6")
+            h5 Create your own meme
+        div(class="col-md-4 sol-sm-6")
+            div(class="image-container")
+                img(src=`${imagePath}${image.filename}` class="meme-card-img", alt="...", id="img-meme")
+                label(id="top-label", class="top-label") top text...
+                label(id="bottom-label", class="bottom-label") header text...
+            input(type="text", class="form-control", placeholder="Top text", id="input-top-text")
+            input(type="text", class="form-control", placeholder="Bottom text", id="input-bottom-text") 
+        div(class="footer-div col-md-4 sol-sm-6")
+            button(type="button" class="btn btn-secondary" data-dismiss="modal" onclick=`onReview();`) Review
+            button(type="button" class="btn btn-primary" onclick=`onCreateMeme(${image.id})`) Create meme        

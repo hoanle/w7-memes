@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="grid")
+    <div class="row">
+      if memes 
+        each meme in memes 
+          div(class="meme-item-div col-md-3 col-sm-6")
+            div(class="col-12")
+            div(class="image-container")
+                img(src=`${imagePath}${meme.originalname}` class="meme-card-img", alt="...")
+                label(class="top-label") #{meme.top}
+                label(class="bottom-label") #{meme.bottom}
+      else 
+        h2 There are no memes

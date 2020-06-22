@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class="grid")
+    <div class="row">
+      if images 
+        each image in images 
+          div(class="meme-item-div col-md-3 col-sm-6")
+            img(src=`${imagePath}${image.filename}`, class="meme-card-img" alt="...", onclick=`openMemeCreator("${imagePath}","${image.filename}",${image.id})`)
+      else 
+        h2 There are no movie
